@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  base: '/',
+  base: '/leetcode-traning-notes/',
   title: 'leetcode练习笔记',
   description: '每天1小时，努力不一定成功，但不努力会很轻松',
-  dest: path.resolve(__dirname, '../../build'),
+  dest: path.resolve(__dirname, '../../docs'),
   themeConfig: {
     nav: [
       {text: '题库', link: '/questionBank/1/'},

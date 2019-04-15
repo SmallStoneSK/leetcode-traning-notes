@@ -4,9 +4,9 @@
   "description": "leetcode练习笔记",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "clean": "rm -rf ./build",
-    "build": "npm run clean && vuepress build docs"
+    "dev": "vuepress dev src",
+    "clean": "rm -rf ./docs",
+    "build": "npm run clean && vuepress build src"
   },
   "repository": {
     "type": "git",

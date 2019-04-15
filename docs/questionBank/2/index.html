@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2.两数相加 | leetcode练习笔记</title>
+    <meta name="description" content="每天1小时，努力不一定成功，但不努力会很轻松">
+    
+    
+    <link rel="preload" href="/leetcode-traning-notes/assets/css/0.styles.8353c2c0.css" as="style"><link rel="preload" href="/leetcode-traning-notes/assets/js/app.dacc9fe7.js" as="script"><link rel="preload" href="/leetcode-traning-notes/assets/js/5.caf95dc6.js" as="script"><link rel="prefetch" href="/leetcode-traning-notes/assets/js/2.d8f505d4.js"><link rel="prefetch" href="/leetcode-traning-notes/assets/js/3.77189526.js"><link rel="prefetch" href="/leetcode-traning-notes/assets/js/4.674b029d.js"><link rel="prefetch" href="/leetcode-traning-notes/assets/js/6.b2565487.js"><link rel="prefetch" href="/leetcode-traning-notes/assets/js/7.d71211a0.js">
+    <link rel="stylesheet" href="/leetcode-traning-notes/assets/css/0.styles.8353c2c0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/leetcode-traning-notes/" class="home-link router-link-active"><!----> <span class="site-name">leetcode练习笔记</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/leetcode-traning-notes/questionBank/1/" class="nav-link">题库</a></div><div class="nav-item"><a href="https://github.com/SmallStoneSK/leetcode-traning-notes" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/SmallStoneSK/Blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/leetcode-traning-notes/questionBank/1/" class="nav-link">题库</a></div><div class="nav-item"><a href="https://github.com/SmallStoneSK/leetcode-traning-notes" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/SmallStoneSK/Blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/leetcode-traning-notes/questionBank/1/" class="sidebar-link">1.两数之和</a></li><li><a href="/leetcode-traning-notes/questionBank/2/" class="active sidebar-link">2.两数相加</a></li></ul> </div> <div class="page"> <div class="content"><h2 id="题目"><a href="#题目" aria-hidden="true" class="header-anchor">#</a> 题目</h2> <p>给出两个<code>非空</code>的链表用来表示两个非负的整数。其中，它们各自的位数是按照<code>逆序</code>的方式存储的，并且它们的每个节点只能存储<code>一位</code>数字。</p> <p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p> <p>您可以假设除了数字<code>0</code>之外，这两个数都不会以<code>0</code>开头。</p> <h2 id="示例"><a href="#示例" aria-hidden="true" class="header-anchor">#</a> 示例</h2> <p><strong>输入：</strong> (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</p> <p><strong>输出：</strong> 7 -&gt; 0 -&gt; 8</p> <p><strong>原因：</strong> 342 + 465 = 807</p> <h2 id="解析"><a href="#解析" aria-hidden="true" class="header-anchor">#</a> 解析</h2> <p>水题，很基本的链表操作问题。</p> <p>需要注意的就是要考虑到<code>链表长度不相同</code>和<code>加法产生进位</code>的情况，防止程序出错。</p> <p>由于只要遍历一遍即可，所以假设两个list的长度分别是m和n，那么时间复杂度是<code>O(max(m, n))</code>；存储新链表需要空间，空间复杂度也是<code>O(max(m, n))</code>。</p> <h2 id="代码"><a href="#代码" aria-hidden="true" class="header-anchor">#</a> 代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * Definition for singly-linked list.
+ */</span>
+<span class="token keyword">function</span> <span class="token function">ListNode</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>val <span class="token operator">=</span> val<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">addTwoNumbers</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+  <span class="token comment">// 非法值处理</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>l1<span class="token punctuation">)</span> <span class="token keyword">return</span> l2<span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>l2<span class="token punctuation">)</span> <span class="token keyword">return</span> l1<span class="token punctuation">;</span>
+  
+  <span class="token comment">// 两个列表同时向前走即可</span>
+  <span class="token comment">// 这里要注意可能最后两个数想加会产生进位，所以循环判断的时候要考虑进位</span>
+  <span class="token keyword">var</span> tmpRet <span class="token operator">=</span> Helper<span class="token punctuation">.</span><span class="token function">calc</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> l <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span>tmpRet<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">,</span> tmpNode <span class="token operator">=</span> l<span class="token punctuation">;</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>l1 <span class="token operator">&amp;&amp;</span> l1<span class="token punctuation">.</span>next<span class="token punctuation">)</span> <span class="token operator">||</span>
+    <span class="token punctuation">(</span>l2 <span class="token operator">&amp;&amp;</span> l2<span class="token punctuation">.</span>next<span class="token punctuation">)</span> <span class="token operator">||</span>
+    tmpRet<span class="token punctuation">.</span>carryNum
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    l1 <span class="token operator">=</span> l1 <span class="token operator">&amp;&amp;</span> l1<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    l2 <span class="token operator">=</span> l2 <span class="token operator">&amp;&amp;</span> l2<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    tmpRet <span class="token operator">=</span> Helper<span class="token punctuation">.</span><span class="token function">calc</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">,</span> tmpRet<span class="token punctuation">.</span>carryNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    tmpNode<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span>tmpRet<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    tmpNode <span class="token operator">=</span> tmpNode<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword">return</span> l<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> Helper <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">calc</span><span class="token punctuation">(</span>node1<span class="token punctuation">,</span> node2<span class="token punctuation">,</span> carryNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> val1 <span class="token operator">=</span> <span class="token punctuation">(</span>node1 <span class="token operator">&amp;&amp;</span> node1<span class="token punctuation">.</span>val<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> val2 <span class="token operator">=</span> <span class="token punctuation">(</span>node2 <span class="token operator">&amp;&amp;</span> node2<span class="token punctuation">.</span>val<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> sum <span class="token operator">=</span> val1 <span class="token operator">+</span> val2 <span class="token operator">+</span> carryNum<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      val<span class="token punctuation">:</span> sum <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">,</span>                  <span class="token comment">// 值</span>
+      carryNum<span class="token punctuation">:</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>sum <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment">// 进位</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// testing code</span>
+<span class="token keyword">const</span> <span class="token function-variable function">createList</span> <span class="token operator">=</span> <span class="token punctuation">(</span>arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> arr<span class="token punctuation">.</span><span class="token function">reduceRight</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span>prev<span class="token punctuation">,</span> cur<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>val<span class="token punctuation">:</span> cur<span class="token punctuation">,</span> next<span class="token punctuation">:</span> prev<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">null</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">const</span> l1 <span class="token operator">=</span> <span class="token function">createList</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> l2 <span class="token operator">=</span> <span class="token function">createList</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> ret <span class="token operator">=</span> <span class="token function">addTwoNumbers</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 相当于createList([7, 0, 8])</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/leetcode-traning-notes/questionBank/1/" class="prev">
+          1.两数之和
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="/leetcode-traning-notes/assets/js/app.dacc9fe7.js" defer></script><script src="/leetcode-traning-notes/assets/js/5.caf95dc6.js" defer></script>
+  </body>
+</html>
