@@ -1,0 +1,24 @@
+{
+  "name": "leetcode-training-notes",
+  "version": "1.0.0",
+  "description": "leetcode练习笔记",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "clean": "rm -rf ./build",
+    "build": "npm run clean && vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmallStoneSK/leetcode-traning-notes.git"
+  },
+  "keywords": [
+    "leetcode"
+  ],
+  "author": "smallstone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmallStoneSK/leetcode-traning-notes/issues"
+  },
+  "homepage": "https://github.com/SmallStoneSK/leetcode-traning-notes#readme"
+}
