@@ -2,7 +2,7 @@
 home: true
 heroImage: /head.jpg
 actionText: 开始阅读
-actionLink: /QuestionBank/2/
+actionLink: /questionBank/1/
 features:
 - title: 题库
   details: 题海战术，搞定简单/中等/困难不同难度类型题目，掌握解题技巧
