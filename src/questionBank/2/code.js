@@ -18,7 +18,7 @@ var addTwoNumbers = function(l1, l2) {
   if(!l2) return l1;
   
   // 两个列表同时向前走即可
-  // 这里要注意可能最后两个数想加会产生进位，所以循环判断的时候要考虑进位
+  // 这里要注意可能最后两个数相加会产生进位，所以循环判断的时候要考虑进位
   var tmpRet = Helper.calc(l1, l2);
   var l = new ListNode(tmpRet.val), tmpNode = l;
   while(
