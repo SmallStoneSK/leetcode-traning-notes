@@ -15,7 +15,8 @@ module.exports = {
     sidebar: {
       '/questionBank/': [
         '1/',
-        '2/'
+        '2/',
+        '3/'
       ]
     }
   }
