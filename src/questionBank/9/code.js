@@ -25,4 +25,7 @@ var isPalindrome = function(x) {
   return copy === y;
 };
 
-isPalindrome(121);
+// testing code
+[121, -121, 10].forEach(x => {
+  console.log(isPalindrome(x));   // true, false, false
+})
