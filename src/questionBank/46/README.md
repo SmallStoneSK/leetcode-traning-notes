@@ -50,9 +50,8 @@ var permute = function(nums) {
 };
 
 [
-  [1,2],
-  [1,2,3],
-  [1,3,5,7]
+  [1,2],    // [[1,2],[2,1]]
+  [1,2,3],  // [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 ].forEach(nums => {
   console.log(JSON.stringify(permute(nums)));
 });
