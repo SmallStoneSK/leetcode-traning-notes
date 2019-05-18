@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/SmallStoneSK/leetcode-traning-notes/issues"
   },
-  "homepage": "https://github.com/SmallStoneSK/leetcode-traning-notes#readme"
+  "homepage": "https://github.com/SmallStoneSK/leetcode-traning-notes#readme",
+  "dependencies": {
+    "vuepress": "^0.14.11"
+  }
 }
