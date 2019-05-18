@@ -18,17 +18,20 @@ install:
   - npm install
 
 before_script:
-  - git config --global user.name "SmallStoneSK"
-  - git config --global user.email "575913857@qq.com"
   - npm run clean
 
 script:
   - npm run build
 
 after_success:
-  - git add --all .
-  - git commit --message "Deploy from travis-ci"
-  - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" gh-pages
+  - git clone --branch=gh-pages https://${GH_REF} dist
+  - mv ./docs ./dist/
+  - cd dist
+  - git config --global user.name "SmallStoneSK"
+  - git config --global user.email "575913857@qq.com"
+  - git add .
+  - git commit -m "Deploy from travis-ci"
+  - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" gh-pages:gh-pages
 
 # Note: you should set Environment Variables here or 'Settings' on travis-ci.org
 env:
