@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  base: '/leetcode-traning-notes/',
+  base: '/leetcode-traning-notes/docs/',
   title: 'leetcode练习笔记',
   description: '每天1小时，努力不一定成功，但不努力会很轻松',
   dest: path.resolve(__dirname, '../../docs'),
