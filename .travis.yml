@@ -25,8 +25,9 @@ script:
 
 after_success:
   - git clone --branch=gh-pages https://${GH_REF} dist
-  - mv ./docs ./dist/
   - cd dist
+  - npm run clean
+  - mv ../docs ./
   - git config --global user.name "SmallStoneSK"
   - git config --global user.email "575913857@qq.com"
   - git add .
