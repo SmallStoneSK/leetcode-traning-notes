@@ -12,7 +12,7 @@ related: 数组|动态规划
 
 问总共有多少条不同的路径？
 
-![示例图](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/robot_maze.png)
+![示例图](./robot_maze.png)
 
 例如，上图是一个7 x 3 的网格。有多少可能的路径？
 
